@@ -13,6 +13,7 @@ export class TodoService {
     }
 
     getAll(){
+       //this.toDos = this.toDos.sort(function(a,b){ return b-a; }); 
        return this.toDos;
     }
     addToDo(toDo:ToDo){

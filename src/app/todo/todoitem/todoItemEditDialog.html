@@ -1,0 +1,9 @@
+<div mat-dialog-content>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.todoName">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data.todoName" cdkFocusInitial>Ok</button>
+  </div>

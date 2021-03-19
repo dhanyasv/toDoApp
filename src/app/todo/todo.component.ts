@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToDo } from "./todo.model";
 import { TodoService } from "./todoservices/todo.service";
@@ -17,8 +17,6 @@ export class TodoComponent implements OnInit{
  toDoForm = new FormGroup({
     todoName : new FormControl('')
  })
- editForm : boolean = false;
- @HostBinding('class.test') addClass: string;
  ngOnInit(){
     this.getAllToDos();
  }
@@ -28,20 +26,12 @@ export class TodoComponent implements OnInit{
     this.allToDos = this.toDoService.getAll();
  }
  completeTask(id:number){
+    console.log(id)
     this.allToDos.filter((toDo) => {toDo.todoId == id ? toDo.completedStatus = ! toDo.completedStatus : ''});
  }
  editToDo(event){
-    console.log(event)
-    this.editForm = true;
+    
 }
- addNewToDo(){
-    let addTODoNAme = (this.toDoForm.value).todoName;
-    this.toDo = new ToDo(addTODoNAme,false,Math.random())
-    console.log(this.toDo)
-
-    //this.toDo = new ToDo(this.toDoName,this.completedStatus,this.toDoId);
-    this.toDoService.addToDo(this.toDo);
- }
  deleteToDo(toDo : ToDo){
     const index = this.allToDos.indexOf(toDo);
     if (index > -1) {

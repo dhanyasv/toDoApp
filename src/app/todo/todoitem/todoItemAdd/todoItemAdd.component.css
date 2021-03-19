@@ -1,0 +1,16 @@
+.addForm{
+    padding : 20px;
+}
+.mat-form-field {
+    display : block;
+}
+.mat-icon{
+    cursor : pointer;
+}
+.paddingTop{
+    padding-top:10px;
+}
+.mat-input-element{
+    font-size:20px;
+    color:darkcyan;
+}

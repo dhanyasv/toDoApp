@@ -1,0 +1,13 @@
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option{
+    background-color: lightcyan;
+    font-weight: bold;
+    color: darkcyan;
+}
+.addSpace {
+    padding : 18px 18px 10px;
+}
+.mat-icon{
+    cursor : pointer;
+}
+

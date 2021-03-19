@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>  
+        <div class="col-md-8">
+            <mat-selection-list [multiple]="false">
+                <mat-list-option>
+                  {{todo.todoName}}
+                </mat-list-option>
+              </mat-selection-list>
+        </div>
+        <div class="col-md-1 addSpace">
+            <mat-icon (click)="openDialog()">edit</mat-icon>
+
+        </div>  
+        <div class="col-md-1 addSpace">
+                <mat-icon (click)=delete()>delete</mat-icon>
+        </div>
+</div>
+  
+

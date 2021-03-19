@@ -1,0 +1,20 @@
+
+<div class="container addForm">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <div [formGroup]="toDoForm" >
+        <mat-form-field class="example-form-field">
+          <input matInput type="text" value="always" formControlName="todoName" placeholder="Add New">
+          <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="setValue()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+          </div>
+    <div class="col-md-2 paddingTop">
+      <mat-icon (click)="addNewToDo()">note_add</mat-icon>
+
+    </div>
+  </div>
